@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="description" content="믿고 맡기는 청소도우미, 홈마스터 1분만에 예약하고 이번주는 푸-욱 쉬세요.">
+	<meta name="keywords" content="홈마스터, 미소, 가사, 가사도우미, 파출부, 청소, 청소도우미">
+	<meta property="og:type" content="website">
+	<meta name="og:title" content="홈마스터 | 믿을 수 있는 가사, 가사 도우미,  청소, 청소 도우미, 파출부">
+	<meta property="og:description" content="믿을 수  있는 청소도우미, 홈마스터 1분만에 예약하고 이번주는 푸-욱 쉬세요.">
+	<meta property="og:image" content="https://www.homemaster.co.kr/img/logo_150x150.png">
+	<meta property="og:url" content="https://www.homemaster.co.kr">
+	<link rel="stylesheet" type="text/css" href="css/addon/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/new_reserv.css">
+    <link rel="stylesheet"  href="css/happytalk.css?1422585377" type="text/css"/>
+	<script type="text/javascript" src="js/addon/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/addon/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/query.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/title-logo.png">
+	<title>홈마스터 | 믿을 수 있는 가사, 가사 도우미,  청소, 청소 도우미, 파출부</title>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSN5ZZ');</script>
+<!-- End Google Tag Manager -->
+	<!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 -->
+	<script type="text/javascript" src="https://wcs.naver.net/wcslog.js"> </script>
+	<script type="text/javascript">
+	// 네이버 전환 추적
+	var _nasa={};
+	_nasa["cnv"] = wcs.cnv("2","1"); // 네이버 : 회원가입
+	if (!wcs_add) var wcs_add={};
+	wcs_add["wa"] = "s_1f37edab531";
+	if (!_nasa) var _nasa={};
+	wcs.inflow();
+	wcs_do(_nasa);
+
+	</script>
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '1101756626516317');
+	fbq('track', "PageView");
+	// 페이스북 전환 추적 - 등록완료.
+	fbq('track', 'CompleteRegistration');
+
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1101756626516317&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+	<script>
+	var isShow = true;
+	$(window).on('beforeunload', function(){
+		if(isShow){
+			//sessionStorage.setItem('p', price);
+			// For IE<8 and Firefox prior to version 4
+			// For Chrome, Safari, IE8+ and Opera 12+
+			return '신청사항이 저장되지 않습니다.';
+		}
+
+	});
+	$(document).ready(function(){
+		if(sessionStorage.getItem('t')=='1'){
+			$("#div-title").removeClass();
+			$("#div-title").addClass("title-once");
+			$("#div-title p").text("한 번만 서비스 신청하기");
+		}else if(sessionStorage.getItem('t')=='2'){
+			$("#div-title").removeClass();
+			$("#div-title").addClass("title-regular");
+			$("#div-title p").text("정기 클리닝 신청하기");
+		}
+		$(".btn-next").click(function(){
+			isShow = false;
+			var payway = $(this).val();
+			console.log(payway);
+			sessionStorage.setItem('pway',payway);
+			if(payway == "현장결제"){
+				var data = {'cleaning_id':sessionStorage.getItem('dtI'),'payment':payway};
+				SelectPaymentWayQuery(data);
+			}
+			else if(payway == "지금결제"){
+				location.href="./cardinfo.html";
+			}
+			else{
+				alert("에러");
+			}
+		});
+	});
+// 	function getBrowserInfo() {
+
+//     var msie = /(msie) ([\d]{1,})./gi.exec(window.navigator.userAgent.split(';'));
+//     var firefox = /(firefox)\/([\d]{1,})./gi.exec(window.navigator.userAgent.split(' ')[6]);
+//     var safari = /(safari)\/([\d]{1,})./gi.exec(window.navigator.userAgent.split(' ')[9]);
+//     var chrome = /(chrome)\/([\d]{1,})./gi.exec(window.navigator.userAgent.split(' ')[8]);
+
+//     var name = '';
+//     var version = 0;
+
+//     if (msie) {
+//         name = msie[1].toLowerCase();
+//         version = msie[2];
+//     }
+//     else if (firefox) {
+//         name = firefox[1].toLowerCase();
+//         version = firefox[2];
+//     }
+//     else if (safari && !chrome) {
+//         name = safari[1].toLowerCase();
+//         version = /(version)\/([\d]{1,})./gi.exec(window.navigator.userAgent.split(' ')[8])[2];
+//     }
+//     else if (safari && chrome) {
+//         name = chrome[1].toLowerCase();
+//         version = chrome[2];
+//     }
+
+//     return {
+//         name: name,
+//         version: version
+//     }
+// }
+
+// function onUnload(e, callback) {
+
+//     var ag = window.navigator.userAgent.toLocaleLowerCase()
+//       , binfo = getBrowserInfo();
+
+//     e = window.event || e;
+//     callback = typeof callback === 'function' ? callback : function () { ; };
+
+//     // IE
+//     if (binfo.name === 'msie') {
+//         if (confirm("callback 함수가 실행 됩니다.")) {
+//             bind(window, 'unload', function (e) { callback() });
+//         }
+//     }
+//     else {
+//         if (binfo.name === 'firefox') {
+//             if (confirm("callback 함수가 실행 됩니다.")) {
+//                 bind(window, 'unload', function (e) { callback(); });
+//             }
+//             else {
+//                 // window loading stop
+//                 windiw.setTimeout(function () { window.stop(); }, 1);
+//             }
+//         }
+//         else if (binfo.name === 'safari') {
+//             if (window.confirm('callback 함수가 실행 됩니다.')) {
+//                 bind(window, 'unload', function (e) { callback(); });
+//             }
+//         }
+//         else if (binfo.name === 'chrome') {
+//             return callback();
+//         }
+//     }
+// }
+
+// function callback() {
+//     // window unload 이벤트 핸들러
+//     document.title = 'title';
+//     alert(document.title);
+//     return 'callback 함수가 실행 됩니다.';
+// }
+
+// // 이벤트 등록 함수
+// function bind(elem, type, handler, capture) {
+//     type = typeof type === 'string' && type || '';
+//     handler = typeof handler === 'function' ? handler : function () { ; };
+
+//     if (elem.addEventListener) {
+//         elem.addEventListener(type, handler, capture);
+//     }
+//     else if (elem.attachEvent) {
+//         elem.attachEvent('on' + type, handler);
+//     }
+
+//     return elem;
+// };
+
+
+// bind(window, 'beforeunload', function (e) {
+//     return onUnload.apply(this, [e, callback]);
+// });
+	</script>
+</head>
+<body class="">
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSN5ZZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<!-- Channel Plugin Scripts -->
+    <!--
+<script>
+  window.channelPluginSettings = {
+    "plugin_id": "3a7f6725-545c-4d07-8b59-27e2ef0b300f"
+  };
+  (function() {
+    var node = document.createElement('div');
+    node.id = 'ch-plugin';
+    document.body.appendChild(node);
+    var async_load = function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//cdn.channel.io/plugin/ch-plugin-web.js';
+      s.charset = 'UTF-8';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    };
+    if (window.attachEvent) {
+      window.attachEvent('onload', async_load);
+    } else {
+      window.addEventListener('load', async_load, false);
+    }
+  })();
+</script>
+-->
+<!-- End Channel Plugin -->
+<div class="btn-chat-happy" style="z-index: 9999;">
+    <div class="btn-chat" id="btn-chat">
+        <a class="happytalk" id="chat-start-btn" data-hasqtip="1" href='https://customer.happytalk.io/public_v1/chat_v4/public_point?go=C&is_login=N&uid=&site_id=4000000331&category_id=68347&division_id=68348&usergb=W&title=%5B%ED%85%8C%EC%8A%A4%ED%8A%B8+%EC%83%81%EB%8B%B4%EC%B0%BD%5D' id="chat-start-btn"  target="_blank">
+        </a>
+    </div>
+</div>
+<div class="container-fluid">
+  	<div id="head_container">
+  	<nav class="col-xs-12 navbar navbar-fixed-top">
+  		<div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="menu-icon">메뉴</span>
+		      </button>
+		      <div class="inline-content">
+		      	<a class="navbar-brand" href="./index.html">
+		        <img src="img/logo.png">
+			      </a>
+			      <p>전화 주문 1800-0199</p>
+		      </div>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="nav-menu">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li id='nav-home'><a href="./index.html">홈</a></li>
+		        <li role="presentation" class="dropdown">
+			        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+			      일상 클리닝 <span class="caret"></span>
+			        </a>
+			        <ul class="dropdown-menu">
+			          	<li><a id="intro" href="./intro.html">홈마스터는?</a></li>
+						<li><a href="./info.html">클리닝 범위</a></li>
+						<li><a href="./cost.html">서비스 가격</a></li>
+			        </ul>
+			    </li>
+                <li role="presentation" ><a href="./office.html">오피스 클리닝</a></li>
+			    <li><a href="./check.html">신청확인</a></li>
+				<li id="nav-li-cleaning"><a id="nav-cleaning" href="./select.html">클리닝 신청</a></li>
+		      </ul>
+		    </div>
+	  </div>
+	</nav>
+	</div>
+	<!--body-->
+	<div id="div-title" class="">
+		<p>한번만 클리닝 신청하기</p>
+	</div>
+	<div id="content-body" class="col-xs-12 col-md-6 col-md-offset-3 margin-b80">
+		<div id="pay_info" class="form-group text-center">
+			<div class="div-radio cc-selector">
+				<h3 style="padding-bottom:30px">결제방법을 선택해주세요.</h3>
+				<div class="row">
+					<input id="ptype-0" class="btn-next" name="stype" type="radio" style="display:none;" value="현장결제" >
+					<label for="ptype-0" class="check-cc service-item">나중에 결제하기</label>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--Footer-->
+	<div id="footer">
+		<div class="col-xs-12">
+			<div id="footer_container" class="row inline-content">
+				<div id="footer-menu-m" class="footer-menu">
+					<div class="text-center">
+						<ul id="footer-menu-list">
+							<li><a href="./faq.html">자주 묻는 질문</a></li>
+							<li><a href="./cancellation_policies.html">취소·변경 환불 정책</a></li>
+						</ul>
+					</div>
+					<div class="inline-content">
+						<div class="footer_sns">
+							<a href="https://www.facebook.com/banzzackbanzzack/" target="_blank"><img src="./img/footer-fb.png" onmouseover="this.src='./img/footer-fb-h.png'" onmouseout="this.src='./img/footer-fb.png'" alt="Facebook"></a>
+						</div>
+						<div class="footer_sns">
+							<a href="http://blog.naver.com/homemaster0000" target="_blank"><img src="./img/footer-naver.png" onmouseover="this.src='./img/footer-naver-h.png'" onmouseout="this.src='./img/footer-naver.png'" alt="Naver"></a>
+						</div>
+						<div class="footer_sns">
+							<a href="https://www.instagram.com/homemaster_official/" target="_blank"><img src="./img/footer-insta.png" onmouseover="this.src='./img/footer-insta-h.png'" onmouseout="this.src='./img/footer-insta.png'" alt="Instagram"></a>
+						</div>
+						<div class="footer_sns">
+							<a href="https://www.youtube.com/channel/UCVczqJlYN51O6rG1TXESr1g" target="_blank"><img src="./img/footer-youtube.png" onmouseover="this.src='./img/footer-youtube-h.png'" onmouseout="this.src='./img/footer-youtube.png'" alt="Youtube"></a>
+						</div>
+					</div>
+				</div>
+				<div id="footer-box">
+					<img id="flogo" src="./img/footer_logo.png">
+					<div class="desktop">
+						<p>사업자번호 : 237-81-00125 | 통신판매업신고 제 2015-서울서초-1320 호</p>
+						<p>인허가번호 : 제 2017-3780288-14-5-0004호</p>
+						<p>대표이사 : 변영표 | 경기도 성남시 분당구 판교역로 221 투썬월드 1층</p>
+						<p>Email : contact@homemaster.co.kr | Tel. 1800-0199</p>
+						<p>ⓒ 2015 homemaster,Inc. All rights reserved.</p>
+					</div>
+					<div class="mobile">
+						<p>사업자번호 : 237-81-00125</p>
+						<p>통신판매업신고 제 2015-서울서초-1320 호</p>
+						<p>인허가번호 : 제 2017-3780288-14-5-0004호</p>
+						<p>대표이사 : 변영표</p>
+						<p>경기도 성남시 분당구 판교역로 221 투썬월드 1층</p>
+						<p>Email : contact@homemaster.co.kr | Tel. 1800-0199</p>
+						<p>ⓒ 2015 homemaster,Inc. All rights reserved.</p>
+					</div>
+				</div>
+				<div id="footer-menu" class="footer-menu">
+					<div class="text-left">
+						<ul id="footer-menu-list">
+							<li><a href="./faq.html">자주 묻는 질문</a></li>
+							<li><a href="./cancellation_policies.html">취소·변경 환불 정책</a></li>
+						</ul>
+					</div>
+					<div class="inline-content">
+						<div class="footer_sns">
+							<a href="https://www.facebook.com/banzzackbanzzack/" target="_blank"><img src="./img/footer-fb.png" onmouseover="this.src='./img/footer-fb-h.png'" onmouseout="this.src='./img/footer-fb.png'" alt="Facebook"></a>
+						</div>
+						<div class="footer_sns">
+							<a href="http://blog.naver.com/homemaster0000" target="_blank"><img src="./img/footer-naver.png" onmouseover="this.src='./img/footer-naver-h.png'" onmouseout="this.src='./img/footer-naver.png'" alt="Naver"></a>
+						</div>
+						<div class="footer_sns">
+							<a href="https://www.instagram.com/homemaster_official/" target="_blank"><img src="./img/footer-insta.png" onmouseover="this.src='./img/footer-insta-h.png'" onmouseout="this.src='./img/footer-insta.png'" alt="Instagram"></a>
+						</div>
+						<div class="footer_sns">
+							<a href="https://www.youtube.com/channel/UCVczqJlYN51O6rG1TXESr1g" target="_blank"><img src="./img/footer-youtube.png" onmouseover="this.src='./img/footer-youtube-h.png'" onmouseout="this.src='./img/footer-youtube.png'" alt="Youtube"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

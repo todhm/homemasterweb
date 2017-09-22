@@ -1,0 +1,246 @@
+/* Base Common */
+*{font-family: NanumSquareOTFB;}
+
+html, body{
+	margin: 0;
+	padding: 0;
+}
+ul, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.inline-content>*{
+	display: inline-block;
+}
+/* Common Body */
+.container{
+	width: 100%;
+}
+.row-label{
+	height: 50px;
+ 	background-color: #4d535e;
+  	
+  	color: #fff;
+}
+.row-label>h4{
+	line-height: 50px;
+	font-size: 20px;
+	margin: 0;
+	font-weight: bold;
+}
+.white_bg{
+	background-color: #fff;
+}
+.grey_bg{
+	background-color: #eeeff3;
+}
+.margin-t10{
+	padding-top: 10px;
+}
+.margin-t20{
+	padding-top: 20px;
+}
+.margin-b20{
+	padding-bottom: 20px;
+}
+.margin-t40{
+	padding-top: 40px;
+}
+.margin-b40{
+	padding-bottom: 40px;
+}
+.margin-t80{
+	padding-top: 80px;
+}
+.margin-b80{
+	padding-bottom: 80px;
+}
+/* Specific Features in Body */
+h1{
+	font-family: NanumSquareOTF;
+  	font-size: 28px;
+  	font-weight: normal;
+  	font-style: normal;
+  	font-stretch: normal;
+  	text-align: left;
+  	color: #000000;
+}
+.nav-tabs{
+	margin-bottom: 30px;
+	border-bottom: 0;
+}
+.nav-tabs>li>a{
+	font-size: 14px;
+  	font-weight: normal;
+  	font-style: normal;
+  	font-stretch: normal;
+  	text-align: center;
+  	color: #b1b1b3;
+  	padding: 5px 0px;
+  	margin: 0;
+  	margin-left: 5px;
+  	margin-right: 15px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    font-size: 14px;
+  	font-weight: normal;
+  	font-style: normal;
+  	font-stretch: normal;
+  	text-align: center;
+  	color: #000000;
+    cursor: default;
+    background-color: #eeeff3;
+    border-bottom: 2px solid #7f8188;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.notice-column{
+	width: 10%;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+#notice-column2{
+	display: none;
+}
+.notice-column-title{
+	background-color: #c9cbd6;
+	height: 36px;
+}
+.notice-column-content{
+	font-family: NanumSquareOTF;
+  	font-size: 14px;
+  	font-weight: bold;
+  	text-align: center;
+  	color: #000000;
+  	background-color: #e5e6eb;
+  	min-height: 187px;
+}
+.notice-column-content p{
+	padding-top: 83px;
+	margin: 0 auto;
+}
+.highlight{
+	 color: #6463c9;
+}
+.item-border-top{
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+.notice-item{
+	width: 22.5%;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.notice-item2{
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.notice-item-title{
+	height: 36px;
+	font-family: NanumSquareOTF;
+  	font-size: 13px;
+  	font-weight: bold;
+  	text-align: left;
+  	text-indent: 20px;
+  	color: #000000;
+  	line-height: 36px;
+}
+.item-b24{
+	background-color: #61d06e;
+}
+.item-i24{
+	background-color: #ffd852;
+}
+.item-dday{
+	background-color: #ff9663;
+}
+.item-aday{
+	background-color: #ff5a5f;
+}
+.notice-item-content{
+	min-height: 187px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.notice-item-content p{
+	font-family: NanumSquareOTF;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: left;
+  color: #4a4a4a;
+  padding: 20px;
+  margin: 0 auto;
+}
+.notice-item-p{
+	min-height: 125px;
+}
+/*****************/
+
+@media only screen and (max-width:595px){
+	.notice-column-content,
+	.notice-item-content{
+		min-height: 300px;
+	}
+	
+	.tab-pane .notice-item{
+		width: 47%;
+	}
+	.tab-pane .notice-item2{
+		width: 31.33333333%;
+	}
+	.notice-column{
+		width: 6%;
+	}
+	.notice-item-p{
+		min-height: 210px;
+	}
+	.notice-column-content p{
+		padding-top: 132px;
+	}
+	.notice-item-content p{
+		font-size: 13px;
+		padding: 15px;
+	}
+	#regular .notice-item-title{
+		font-size: 11px;
+		text-indent: 5px;
+	}
+}
+
+@media only screen and (min-width:596px) and (max-width:776px){
+	#regular .notice-column-content,
+	#regular .notice-item-content{
+		min-height: 250px;
+	}
+	#regular .notice-item-content .notice-item-p{
+		min-height: 160px;
+	}
+
+}
+@media only screen and (max-width:1145px){
+	.notice-item{
+		width: 45%;
+	}
+	#notice-column2{
+		display: block;
+	}
+}
+@media only screen and (min-width:1200px){
+	.notice-item-content {
+  	  min-height: 222px;
+	}
+	.notice-column-content {
+  	  min-height: 222px;
+	}
+	.notice-column-content p {
+	    padding-top: 101px;
+	}
+}

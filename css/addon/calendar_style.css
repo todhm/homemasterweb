@@ -1,0 +1,28 @@
+/* Kurien / Kurien's Blog / http://blog.kurien.co.kr */
+/* 주석만 제거하지 않는다면, 어떤 용도로 사용하셔도 좋습니다. */
+
+#r-calendar {width: 280px; height: 310px; padding: 15px; box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px rgb(233, 233, 235); position: absolute; z-index: 1029; background-color: #fff;}
+
+#r-calendar #header {height: 50px; line-height: 50px; text-align: center; font-size: 18px; font-weight: bold}
+#r-calendar .button {color: #000; text-decoration: none; cursor: pointer;}
+
+#r-calendar table {width: 250px; height: 200px;}
+#r-calendar caption {display: none;}
+#r-calendar td{cursor: not-allowed;opacity: 0.3;}
+#r-calendar .day{cursor: pointer;opacity: 1;}
+
+#r-calendar .sun {text-align: center; color: #ff5859;}
+#r-calendar .mon {text-align: center;}
+#r-calendar .tue {text-align: center;}
+#r-calendar .wed {text-align: center;}
+#r-calendar .thu {text-align: center;}
+#r-calendar .fri {text-align: center;}
+#r-calendar .sat {text-align: center; color: #2fb1cd;}
+#r-calendar .today {background-color: #eeeef1; border-radius: 30px; color: #000;}
+#r-calendar-body .day:hover{background-color: #ff5859; border-radius: 30px; color: #fff;}
+#r-calendar-body .active{background-color: #ff5859; border-radius: 30px; color: #fff;}
+
+@media only screen and (max-width:500px){
+	#r-calendar{height: 340px;}
+}

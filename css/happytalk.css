@@ -1,0 +1,12 @@
+.btn-chat {position:fixed;z-index:9001;bottom:20px;right:20px;width:80px;height:80px;padding:1px 6px 10px 6px;background:url('https://happytalk.io/assets/main/img/btn-chat.png') no-repeat;background-size:92px 91px;}
+.btn-chat a.happytalk {display:block;width:80px;height:80px;background:url('https://happytalk.io/assets/main/img/btn-chat.png') no-repeat;background-size:80px;}
+.btn-chat a.happytalk:hover {background:url('https://happytalk.io/assets/main/img/btn-chat.png') no-repeat;background-size:80px;}
+@media (max-width: 767px) {
+.btn-chat {bottom:10px;right:10px;width:60px;height:60px;padding:2px 5px 8px 5px;background-size:70px;}
+.btn-chat a.happytalk {display:block;width:60px;height:60px;background-size:60px;}
+.btn-chat a.happytalk:hover {background-size:60px;}
+}
+
+element.style {
+    z-index: 9999;
+}
