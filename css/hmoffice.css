@@ -81,9 +81,8 @@ ul, li{
 
 }
 #content-main{
-	padding-top: 150px;
-    padding-bottom: 150px;
-	background-image: url("../img/hmoffice/main.png");
+	padding-top: 23px;
+    padding-bottom: 23px;
 	background-repeat: no-repeat;
 	-webkit-background-repeat: no-repeat;
 	-o-background-repeat: no-repeat;
@@ -104,18 +103,18 @@ ul, li{
 #content-body>.row{
 	text-align: center;
 }
-
+.header_img{
+    padding-bottom: 32px
+}
 .btn_red{
-	margin: 1em;
-	margin-top: 20px;
-	width: 270px;
-  	height: 42px;
-  	line-height: 30px;
+    width: 300px;
+  	height: 50px;
+  	line-height: 38px;
   	border-radius: 8px;
   	background-color: #ff5859;
- 	font-family: NanumSquareOTFB;
-	font-size: 1.1em;
-  	font-weight: 400;
+  	font-family: NanumSquareOTFB!important;
+	font-size: 2em;
+  	font-weight: normal;
   	text-align: center;
   	color: #ffffff;
   	cursor: pointer;
