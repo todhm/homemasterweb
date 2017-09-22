@@ -1,0 +1,1 @@
+rsync -av -r -e "ssh -p 22222  -i ~/.ssh/pmlkey"  --include '*/' --include '*.css' --exclude '*' /Users/hm/desktop/homemaster/week11/homemaster_new_web/css dev@139.162.11.214:/home/dev/homemaster_new_web/
