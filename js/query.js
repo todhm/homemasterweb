@@ -33,7 +33,7 @@ function SubmitOfficeRequestQuery(data){
 		    	}
 		    }
 		    else{
-                
+
 		    	$.spin('false');
 
 		    	//네이버 전환 추적

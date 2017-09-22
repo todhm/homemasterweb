@@ -54,6 +54,18 @@ ul, li{
 .margin-b80{
 	padding-bottom: 80px;
 }
+.body-img{
+    max-width:90%;
+    max-height:90%;
+    margin:auto;
+    display:block;
+}
+.body-img2{
+    max-width:70%;
+    max-height:90%;
+    margin:auto;
+    display:block;
+}
 
 .container-fluid #nav-menu ul li a:focus,
 .container-fluid #nav-menu ul li a:hover{
@@ -71,7 +83,7 @@ ul, li{
 #content-main{
 	padding-top: 150px;
     padding-bottom: 150px;
-	background-image: url("../img/main/img-main.png");
+	background-image: url("../img/hmoffice/main.png");
 	background-repeat: no-repeat;
 	-webkit-background-repeat: no-repeat;
 	-o-background-repeat: no-repeat;
@@ -95,7 +107,7 @@ ul, li{
 
 .btn_red{
 	margin: 1em;
-	margin-top: 37px;
+	margin-top: 20px;
 	width: 270px;
   	height: 42px;
   	line-height: 30px;
@@ -189,6 +201,11 @@ ul, li{
 	.body-img{
 		width: 100%;
 	}
+    .body-img2{
+        width: 80%;
+    }
+
+
 	.form-horizontal .control-label{
 		font-size: 13px;
 	}

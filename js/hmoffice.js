@@ -41,28 +41,18 @@ function fn_press_han(obj)
 
 function SubmitOfficeRequest(){
 	var cname = $("#off-cname").val();
-	var add = $("#off-add").val();
 	var rname = $("#off-rname").val();
 	var ttel = $("#off-tel").val().split("-");
 	var tel ="";
 	for(var i=0; i<ttel.length; i++){
 		tel += ttel[i];
 	}
-	var ctype = $("#off-ctype").val();
-	var stype = $("#off-stype").val();
 
 	if(cname ==''){
 		alert("상호명을 입력해 주세요.");
 		return false;
 	}
-	else if(add ==''){
-		alert("귀사의 주소를 입력해 주세요.");
-		return false;
-	}
-	else if(ctype == null){
-		alert("업종을 선택해 주세요.");
-		return false;
-	}
+
 	else if(rname ==''){
 		alert("예약하시는 분의 성함을 입력해 주세요.");
 		return false;
@@ -75,12 +65,10 @@ function SubmitOfficeRequest(){
 		alert("올바른 연락처를 입력해 주세요.");
 		return false;
 	}
-	else if(stype == null){
-		alert("서비스 종류를 선택해 주세요.");
-		return false;
-	}
 
-	var data = {'corp_name':cname, 'address':add, 'corp_type':ctype, 'reserve_name':rname, 'phone':tel, 'service_type':stype};
+
+	var data = {'corp_name':cname, 'reserve_name':rname, 'phone':tel};
+    console.log(data);
 	SubmitOfficeRequestQuery(data);
 }
 (function($) {
