@@ -80,7 +80,9 @@ ul, li{
 	padding-left: 25px;
 
 }
+
 #content-main{
+    background-image:linear-gradient( rgba(255, 255, 255, 255), rgba(255, 255, 255, 0) ), url("../img/hmoffice/office008_003.jpg");
 	padding-top: 23px;
     padding-bottom: 23px;
 	background-repeat: no-repeat;
@@ -100,6 +102,7 @@ ul, li{
     -o-transition: background-color 500ms ease-out 1s;
     transition: background-color 500ms ease-out 1s;
 }
+
 #content-body>.row{
 	text-align: center;
 }
