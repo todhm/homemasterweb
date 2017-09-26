@@ -154,11 +154,11 @@ function InitPage(){
 		$("#div-title p").text("한 번만 서비스 신청하기");
 		$("#div-date").children('h3').text("클리닝 받고 싶은 날짜를 선택해주세요");
 		$("#div-calc").children('h3').text("한 번만 클리닝 예상 견적 입니다");
-		$("#div-total-price-value").children('h2').text("55000원");
-		$("#div-base-price-value").children('h2').text("55000원");
-		$("#floating-total-price").text("55000원");
-		$("#floating-base-price").text("55000원");
-		rprice = 55000;
+		$("#div-total-price-value").children('h2').text("58000원");
+		$("#div-base-price-value").children('h2').text("58000원");
+		$("#floating-total-price").text("58000원");
+		$("#floating-base-price").text("58000원");
+		rprice = 58000;
 		rtime = 4.0;
 		$('#input-date').val('');
 
@@ -179,19 +179,19 @@ function InitPage(){
 			$("#div-date").children('h3').text("클리닝 시작 날짜를 선택해주세요");
 		}
 		if(sessionStorage.getItem('per') == "2주에한번"){
-			$("#div-total-price-value").children('h2').text("55000원");
-			$("#div-base-price-value").children('h2').text("55000원");
-			$("#floating-total-price").text("55000원");
-			$("#floating-base-price").text("55000원");
+			$("#div-total-price-value").children('h2').text("58000원");
+			$("#div-base-price-value").children('h2').text("58000원");
+			$("#floating-total-price").text("58000원");
+			$("#floating-base-price").text("58000원");
 		}else{
 			$("#floating-promotion").show();
 			$("#div-total-price-promotion").show();
 			$("#div-calc").children('h3').text("정기 클리닝 예상 견적 입니다");
 			/* 프로모션 이전 코드 */
-			 $("#div-total-price-value").children('h2').text("55000원");
-			 $("#div-base-price-value").children('h2').text("55000원");
-		     $("#floating-total-price").text("55000원");
-			 $("#floating-base-price").text("55000원");
+			 $("#div-total-price-value").children('h2').text("58000원");
+			 $("#div-base-price-value").children('h2').text("58000원");
+		     $("#floating-total-price").text("58000원");
+			 $("#floating-base-price").text("58000원");
 			/*****************/
 
 			/***************************/
@@ -207,7 +207,7 @@ function InitPage(){
 			/***************************/
 		}
 
-		rprice = 55000;
+		rprice = 58000;
 		rtime = 4.0;
 		$('#input-date').val('');
 	}
@@ -350,16 +350,16 @@ function CalcTimePrice(){
 	var extraTime = 0; // 방 or 화장실 갯수로 인한 시간 추가.
     var ttime = rtime + atime + adjustedTime;
     if (ttime == 4 & aptype == 'ansim'){
-        rprice = 55000;
+        rprice = 58000;
     }
     else if (ttime >4 & aptype == 'ansim'){
-        rprice = 105000;
+        rprice = 108000;
     }
     else if (ttime == 4 & aptype == 'normal'){
-        rprice = 45000;
+        rprice = 48000;
     }
     else {
-        rprice = 85000;
+        rprice = 88000;
     }
     /**
 	if(rflag == '1'){
@@ -417,7 +417,7 @@ function CalcAddReq(element){
 			atime += 2.0;
 		}
 		else if($(element).val() == "양문형냉장고"){
-			aprice += 45000;
+			aprice += 48000;
 			atime += 3.0;
 		}
 		else{
@@ -433,7 +433,7 @@ function CalcAddReq(element){
 			atime -= 2.0;
 		}
 		else if($(element).val() == "양문형냉장고"){
-			aprice -= 45000;
+			aprice -= 48000;
 			atime -= 3.0;
 		}
 		else{
