@@ -190,6 +190,36 @@ ul, li{
 	margin: 40px 0;
 }
 
+.hiretext{
+color: red;
+font-size:10px
+padding: 3px;
+position:absolute;
+}
+.btn-hire {position:fixed;z-index:9001;bottom:20px;left:20px;width:80px;height:80px;padding:1px 6px 10px 6px; no-repeat;background-size:92px 91px;display:block; }
+.btn-hire a.hire {background:url("../img/cost/regular.png");
+                  display:block;
+                  width:80px;
+                  height:80px;
+                  no-repeat;
+                  background-size:80px;
+                  font-size:13px;
+                  color:#ff5859;}
+@media (max-width: 767px) {
+.btn-hire {bottom:10px;left:10px;width:60px;height:60px;padding:2px 5px 8px 5px;background-size:70px;}
+.btn-hire a.hire {display:block;width:60px;height:60px;background-size:60px;}
+.hiretext{
+color: red;
+font-size:9px;
+padding:2px;
+}
+}
+
+element.style {
+    z-index: 9999;
+}
+
+
 /*****************/
 @media only screen and (min-width:1340px){
 
