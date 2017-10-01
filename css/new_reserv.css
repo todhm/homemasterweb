@@ -18,6 +18,9 @@ h1,h2,h3,h4,h5,h6,p{
 	margin: 0;
 	padding: 0;
 }
+.choosuk-noti{
+    color:blue;
+}
 input,textarea{
 	font-weight: 400!important;
 	font-family: 'NanumSquareOTFB';
@@ -32,7 +35,7 @@ input[type="password"]{
 	color: rgb(202, 202, 208)!important;
 	font-weight: 100!important;
 	font-family: NanumSquareOTFBL;
-} 
+}
 :-moz-placeholder {
 	color: rgb(202, 202, 208)!important;
    opacity: 1;
@@ -41,7 +44,7 @@ input[type="password"]{
 }
 ::-moz-placeholder {
 	color: rgb(202, 202, 208)!important;
-   opacity: 1; 
+   opacity: 1;
    font-weight: 100!important;
    font-family: NanumSquareOTFBL;
 }
@@ -83,7 +86,7 @@ input[type="password"]{
 .row-label{
 	height: 50px;
  	background-color: #4d535e;
-  	
+
   	color: #fff;
 }
 .row-label>h4{
@@ -234,7 +237,7 @@ textarea.form-control {
 	color: #9f9fa6;
 	text-align: center;
 }
-.title-regular{	
+.title-regular{
 	background-color: #fdeced;
 	color: #ff5859;
 	text-align: center;
@@ -329,7 +332,7 @@ textarea.form-control {
 #floating-base-price,
 #floating-add-price{
 	margin-top: 1px;
-}	
+}
 #floating-price>div:last-child #floating-total-price{
   	font-size: 36px;
   	font-family: NanumSquareOTFBold;
@@ -840,7 +843,7 @@ span.addon-box{
     height: 100%;
 }
 #row002>h4{
-	padding:0 30px; 
+	padding:0 30px;
 	padding-top: 7%;
 	line-height: 1.47;
 }
@@ -1128,7 +1131,7 @@ span.addon-box{
 		width: 100%;
 		max-width: 100%;
 	}
-	
+
 	.info-div label{
 		font-size: 20px;
 		width: 22%;
@@ -1327,7 +1330,7 @@ span.addon-box{
 		font-size: 14px;
 		padding-top: 2px;
 	}
-	
+
 	.div-title>h3{
 		font-size: 16px;
 		padding-bottom: 18px;
@@ -1341,7 +1344,7 @@ span.addon-box{
 		margin-top: 2px;
 		margin-right: 1px;
 	}
-	
+
 	.info-div input{
 		height: 60px!important;
 	}
