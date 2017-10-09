@@ -2,7 +2,7 @@
 server host  : https://homemaster-service.com*/
 //var getAPIURL = "http://192.168.0.114:8888";
 //var getAPIURL = "https://homemaster-service.com";
-var getAPIURL ="103.3.61.190:8888"; 
+var getAPIURL = "https://103.3.61.190:8888";
 /*
 $.ajax(function(){
 	method:"POST",
