@@ -1,8 +1,7 @@
 /*test host      : http://192.168.0.114:8888
 server host  : https://homemaster-service.com*/
 //var getAPIURL = "http://192.168.0.114:8888";
-//var getAPIURL = "https://homemaster-service.com";
-var getAPIURL = "https://103.3.61.190:8888";
+var getAPIURL = "https://homemaster-service.com";
 /*
 $.ajax(function(){
 	method:"POST",
@@ -47,23 +46,11 @@ function SubmitOfficeRequestQuery(data){
 				wcs.inflow();
 				wcs_do(_nasa);
 
-				// Google Tag Manager : 상품구매 - 오피스클리닝
-		    	dataLayer.push({'event':'purchase','eventCategory':'상품구매','eventAction':'오피스클리닝',
-				  'ecommerce': {
-				    'purchase': {
-				      'actionField': {
-				        'id': 'office00',          // Transaction ID. Required for purchases and refunds.
-				        'revenue': '1',                     // Total transaction value (incl. tax and shipping)
-				      },
-				      'products': [{                            // List of productFieldObjects.
-				        'name': '오피스클리닝',     // Name or ID is required.
-				        'id': '5',
-				        'price': '1',
-				        'quantity': 1,
-				       }]
-				    }
-				  }
-				});
+				// Google Tag Manager : 견적 신청 - 오피스클리닝
+                dataLayer.push({'event':'requestService',
+                                'eventCategory':'오피스클리닝신청',
+                                'eventAction':getAPIURL+'/inquery_office',
+                                'eventLabel':"requestService"});
 				//FB 오피스 클리닝 접수
 				fbq('track', 'Purchase', {value: "1", currency: 'KRW'});
 		    	alert("접수가 성공적으로 되었습니다.")

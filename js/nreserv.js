@@ -8,11 +8,11 @@ var aprice = 0;
 var period = "";
 window.onpageshow = function (event) {
     if (event.persisted) {
-        //console.log('BFCahe로부터 복원됨');
+        console.log('BFCahe로부터 복원됨');
         InitPage();
     }
     else {
-        //console.log('새로 열린 페이지');
+        console.log('새로 열린 페이지');
         InitPage();
     }
 };
