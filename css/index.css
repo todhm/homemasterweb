@@ -469,26 +469,21 @@ h4{
   	line-height: 82px;
   	margin-top: 30px;
   	margin-bottom: -30px;
-  	background-color: #4d535e;
 }
 #btn_reserv:hover,
 #btn_reserv:focus,
 #btn_reserv2:hover,
 #btn_reserv2:focus{
-	background-color: #ffffff;
-	color: #ff5859;
 }
 .btn_reserv{
 	width: 300px;
   	height: 50px;
   	line-height: 38px;
   	border-radius: 8px;
-  	background-color: #ff5859;
   	font-family: NanumSquareOTFB!important;
 	font-size: 2em;
   	font-weight: normal;
   	text-align: center;
-  	color: #ffffff;
   	cursor: pointer;
   	text-decoration: none;
   	border-color: #ff5859;
@@ -500,8 +495,6 @@ h4{
 .btn_reserv:hover,
 .btn_reserv:active{
 	text-decoration: none;
-	background-color: #ff5859;
-	color: #fff;
 }
 .btn_app{
 	padding: 0;
@@ -652,8 +645,6 @@ h4{
 	}
 	#btn_reserv:hover,
 	#btn_reserv:focus{
-		background-color: #ffffff;
-		color: #ff5859;
 		line-height: 80px;
 	}
 	#row5{

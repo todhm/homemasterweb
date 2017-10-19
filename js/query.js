@@ -111,9 +111,15 @@ function GetActiveEventsQuery(){
 	    	console.log(temptxt);
 	    	$("#div-row-banner").append(temptxt);
 	    	for(var i=0;i<msg.response.length;i++){
-	    		$("#row-banner"+(i)).css("background-image","url("+msg.response[i].image_url_web+")");
-	    		$("#div-event-banner-page"+i).css("background-image","url("+msg.response[i].image_url_web+")");
-	    		$("#div-event-banner-page"+i).append("<a href='"+msg.response[i].link+"?route=web'></a>");
+	    		$("#row-banner"+(i)).css("background-image","url("+"./img"+")");
+                if(i==0){
+     	    		$("#div-event-banner-page"+i).css("background-image","url("+ " ./img/event_user_group_web.png " + ")");
+                }
+                else{
+                    $("#div-event-banner-page"+i).css("background-image","url("+" ./img/hm_banner_wide.png "+")");
+                }
+                $("#div-event-banner-page"+i).append("<a href='"+msg.response[i].link+"?route=web'></a>");
+
 	    	}
 
 	    },

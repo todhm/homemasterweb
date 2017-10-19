@@ -1,0 +1,178 @@
+@charset 'utf-8';
+/*===========================================================================
+	RESET CSS
+============================================================================*/
+html{-webkit-text-size-adjust:none;-webkit-overflow-scrolling: none;overflow-y:scroll;-ms-touch-action: manipulation;touch-action: manipulation;}
+html,body{width:100%;height:100%;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,select,textarea,p,blockquote,address{margin:0;padding:0;outline-style:none;outline-offset:0;}
+input[type=image],input[type=text],input[type=submit],input[type=password]{-webkit-border-radius:0;-webkit-appearance:none;}
+img,fieldset,button,iframe{border:0 none;}
+fieldset{min-width:0;-webkit-margin-start:0;-webkit-margin-end:0;-webkit-padding-before:0;-webkit-padding-start:0;-webkit-padding-end:0;-webkit-padding-after:0;}
+hr,button img{display:none;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+caption,th{text-align:left;}
+ol,ul{list-style:none;}
+textarea{overflow:auto;}
+legend{position:absolute;top:0;left:0;visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-height:0;}
+a,a:link,a:visited,a:active,a:hover{text-decoration:none;}
+br{display:block;margin-bottom:0;font-size:0;line-height:0;}
+br:before{display: block;margin-top:0;content: '';}
+br:after{content: '.';visibility: hidden;display: block;}
+/*===========================================================================
+	FONT
+============================================================================*/
+*{}
+/*===========================================================================
+	CONTENT USER SETTING
+===========================================================================*/
+/*- visibility,display ----------------------------------------------------------------------*/
+.fixed{display:block;min-height:1%;*zoom:1;}
+.fixed:after{display:block;visibility:hidden;clear:both;height:0;content:'.';font-size:0;line-height:0;}
+* html .fixed{height:1%;}
+.show{display:block;visibility:visible;}
+.hide{display:none;visibility:hidden;}
+.no-select{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.img-txt, .img-txt *,.img-txt-title{display:inline-block !important;overflow:hidden;text-indent:-99999px !important;font-size:0px !important;line-height:0px !important;*text-indent:0 !important;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.img-menu,.img-menu *{display:inline-block !important;text-indent:-99999px !important;font-size:0px !important;line-height:0px !important;*text-indent:0 !important;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+/*- link ----------------------------------------------------------------------*/
+a,a *,a:link,a:link *{cursor:pointer;}
+/*- cursor ----------------------------------------------------------------------*/
+.cursor{cursor:pointer}
+/*- li,ol,ul,dl ----------------------------------------------------------------------*/
+ol{list-style:decimal;list-style-position:outside;}
+ul{list-style-position:outside;}
+dl dt{}
+/*- table ----------------------------------------------------------------------*/
+table{position:relative;border-spacing:0;}
+table th{text-align:left;font-weight:bold;}
+table th,table td{vertical-align:top;word-wrap:break-word;}
+/*vertical*/
+table.tbl-vertical{}
+/*horizontal*/
+table.tbl-horizon{}
+/*layout*/
+table.tbl-layout{}
+/*tblForm*/
+table.tbl-form{}
+/*sortOption*/
+table .set-hidden-position > *,
+table .set-hidden-position > tr > *{margin:0 !important;padding:0 !important;height:0 !important;border:0 !important;background:none !important;}
+/*- form-area ----------------------------------------------------------------------*/
+.form-area .txt-label{display:inline-block;font-weight:bold;}
+.form-area .txt-guide{display:inline-block;}
+/*error*/
+.form-area .required-star{vertical-align:middle;}
+.form-area input.validate-error,.form-area select.validate-error,.form-area div.validate-error-area{border-style:dotted;}
+/*.form-area div.validate-error{white-space:nowrap;}*/
+/*- form ----------------------------------------------------------------------*/
+.text-field,.select-field,.textarea-field-area,.file-field{display:inline-block;margin:0;padding:0;outline:none none;border-style:solid;border-width: 1px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background:none;vertical-align:top !important;}
+.text-field{*text-indent:0;-webkit-appearance:none;}
+.select-field{*text-indent:0;-webkit-appearance:menulist;}
+.select-field.multiple{height:auto;}
+.file-field{}
+.textarea-field-area{overflow:hidden;}
+.textarea-field-area > .textarea-field{min-width:100%;min-height:100%;border:0;resize:none;*margin:0;-webkit-appearance:none;}
+.checkbox-field,.radio-field{vertical-align:middle;}
+.txt-input-guide{}
+.text-field[disabled],.select-field[disabled],.textarea-field[disabled],.file-field[disabled]{}
+/*- button ----------------------------------------------------------------------*/
+.btn{position:relative;display:inline-block !important;overflow:visible !important;margin:0;padding:0;outline:none !important;border:0;background-color:transparent;background-repeat:no-repeat;vertical-align:top;text-decoration:none !important;cursor:pointer !important;zoom:1;*display:inline !important;}
+/*- background-image Button  ----------------------------------------------------------------------*/
+.bg-btn{position:relative;display:inline-block !important;overflow:visible !important;margin:0;padding:0;outline:none !important;border:0 !important;background-color:transparent;background-repeat:repeat-x;vertical-align:top;text-decoration:none !important;cursor:pointer !important;zoom:1;*display:inline !important;}
+/*- Image Button ----------------------------------------------------------------------*/
+.img-btn{display:inline-block !important;overflow:visible;margin:0;padding:0;outline:none !important;border:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background-color:transparent;background-repeat:no-repeat;vertical-align:top;text-align:center;text-decoration:none !important;text-indent:-99999px !important;font-size:0px !important;line-height:0px !important;cursor:pointer;*text-indent:0 !important;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+/*- img Bullet ----------------------------------------------------------------------*/
+.img-bul{display:inline-block !important;overflow:hidden;background-color:transparent;background-repeat:no-repeat;vertical-align:top;text-indent:-99999px !important;font-size:0px !important;line-height:0px !important;*text-indent:0 !important;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+/*- imgBlock ----------------------------------------------------------------------*/
+.img-block{overflow:hidden;}
+.img-block > img{float:left;max-width:100%;min-width:100%;width:100%;}
+/*- line ----------------------------------------------------------------------*/
+.line-solid{display:block;padding:0;height:1px;border:0;*border:1px solid;}
+/*- etc ----------------------------------------------------------------------*/
+.ajax-login-bar{}
+.ajax-loading{}
+.modal-img-preview{text-decoration:none !important;cursor:pointer;}
+/*===========================================================================
+	CONTAINER
+============================================================================*/
+body .content > .head{display:block;min-height:1%;*zoom:1;}
+body .content > .head:after{display:block;visibility:hidden;clear:both;height:0;content:'.';font-size:0;line-height:0;}
+* html body .content > .head{height:1%;}
+body .content > .main{display:block;min-height:1%;*zoom:1;}
+body .content > .main:after{display:block;visibility:hidden;clear:both;height:0;content:'.';font-size:0;line-height:0;}
+* html body .content > .main{height:1%;}
+body .content > .foot{display:block;min-height:1%;*zoom:1;}
+body .content > .foot:after{display:block;visibility:hidden;clear:both;height:0;content:'.';font-size:0;line-height:0;}
+* html body .content > .foot{height:1%;}
+body .content .section{display:block;min-height:1%;*zoom:1;}
+body .content .section:after{display:block;visibility:hidden;clear:both;height:0;content:'.';font-size:0;line-height:0;}
+* html body .content .section{height:1%;}
+body .content .inner-section{display:block;min-height:1%;*zoom:1;}
+body .content .inner-section:after{display:block;visibility:hidden;clear:both;height:0;content:'.';font-size:0;line-height:0;}
+* html body .content .inner-section{height:1%;}
+/*===========================================================================
+	Extend Jquery.ui
+============================================================================*
+/*- datepicker.css ----------------------------------------------------------------------*/
+.calendar-area{position:relative;}
+.calendar-area > .text-field{}
+.calendar-area > .datepicker{position:absolute;z-index:1;}
+.calendar-area > span{vertical-align:top;}
+.ui-datepicker{display:none;}
+.ui-datepicker *{}
+.ui-datepicker > .ui-datepicker-header{position:relative;font-weight:bold;}
+.ui-datepicker > .ui-datepicker-header{position:relative;font-weight:bold;}
+.ui-datepicker > .ui-datepicker-header .ui-state-disabled{display:none;visibility:hidden;}
+.ui-datepicker > .ui-datepicker-header .ui-corner-all{position:absolute;text-decoration:none;}
+.ui-datepicker > .ui-datepicker-header .ui-corner-all.ui-datepicker-prev{}
+.ui-datepicker > .ui-datepicker-header .ui-corner-all.ui-datepicker-next{}
+.ui-datepicker > .ui-datepicker-header .ui-corner-all > span{position:absolute;top:0;left:0;display:block;text-decoration:none;}
+.ui-datepicker > .ui-datepicker-header .ui-datepicker-title{text-align:center;}
+.ui-datepicker > .ui-datepicker-header .ui-datepicker-title > *{}
+.ui-datepicker table.ui-datepicker-calendar > * > tr > *{margin:0;padding:0;border:0;}
+.ui-datepicker table.ui-datepicker-calendar > * > tr > * > *{display:block;text-align:center;text-decoration:none;font-weight:bold;}
+.ui-datepicker table.ui-datepicker-calendar{margin:0;width:100%;border-collapse:collapse;}
+.ui-datepicker table.ui-datepicker-calendar > tbody > tr > td > *{ }
+.ui-datepicker table.ui-datepicker-calendar > tbody > tr > td > a:hover{}
+.ui-datepicker table.ui-datepicker-calendar > tbody > tr > td > *.ui-state-active{}
+.ui-datepicker table.ui-datepicker-calendar > tbody > tr > td:first-child *{}
+.ui-datepicker table.ui-datepicker-calendar > tbody > tr > td.select-range{}
+.ui-datepicker table.ui-datepicker-calendar > tbody > tr > td.ui-state-disabled,
+.ui-datepicker table.ui-datepicker-calendar > tbody > tr > td.ui-state-disabled > *{background-color:transparent !important;}
+.ui-datepicker table.ui-datepicker-calendar > tbody > tr > td.ui-datepicker-today > *{background-color:transparent !important;}
+.ui-datepicker-trigger{}
+/*- autocomplete.css ----------------------------------------------------------------------*/
+.combobox-field-area{position:relative;display:inline-block;}
+.combobox-field-area > a.img-btn{position:absolute;}
+.combobox-field-area .ui-autocomplete{position:absolute;overflow-y:auto;}
+.combobox-field-area .ui-autocomplete > li{}
+.combobox-field-area .ui-autocomplete > li:hover{}
+/*-  Images Ajax Upload ----------------------------------------------------------------------*/
+.attachment-lst-box .attachment-lst{display:block;float:left;clear:both;min-height:1%;*zoom:1;}
+.attachment-lst-box .attachment-lst:after{visibility:hidden;clear:both;height:0;content:'.';font-size:0;line-height:0;}
+* html .attachment-lst-box .attachment-lst{height:1%;}
+.attachment-lst-box{}
+.attachment-lst-box .attachment-lst{position:relative;}
+.attachment-lst-box .attachment-lst .img-block{position:relative;float:left;}
+.attachment-lst-box .attachment-lst .img-block.use-delete:cursor:pointer;}
+.attachment-lst-box .attachment-lst .img-block.use-delete:hover img{}
+.attachment-lst-box .attachment-lst .img-btn.use-delete{vertical-align:bottom;}
+.ajax-login-bar+ul,input.use-attachment.hide+ul{}
+/*===========================================================================
+	MODAL
+============================================================================*/
+/*- GModal ----------------------------------------------------------------------*/
+html.use-gModal{overflow:hidden;overflow-x:hidden;overflow-y:hidden;}
+html.use-gModal body{overflow:hidden;overflow-x:hidden;overflow-y:hidden;}
+.gModal{position:fixed;top:0;left:0;z-index:999;overflow:auto;padding:0;width:100%;height:100%;}
+.gModal > .gModal-content{position:absolute;display:none;}
+.gModal > .gModal-content > *{}
+.gModal > .gModal-content .gModal-close{position:absolute;z-index:1;}
+.gModal-background{position:fixed;top:0;left:0;z-index:998;display:block;width:100%;height:100%;}
+/*- gModalMessage ----------------------------------------------------------------------*/
+.gModalMessage{position:fixed;bottom:0;left:0;z-index:999;overflow:auto;padding:0;}
+.gModalMessage > .gModal-content{position:relative;}
+.gModalMessage > .gModal-content > .opacity-bg{z-index:-1;position:absolute;top:0;left:0;width:100%;height:100%;}
+.gModalMessage > .gModal-content > p{font-weight:bold;text-align:center;}
+/*===========================================================================
+	CONTENTS
+============================================================================*

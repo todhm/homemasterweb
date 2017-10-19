@@ -1,0 +1,53 @@
+@charset 'utf-8';
+/*===========================================================================
+	LAYOUT
+============================================================================*/
+body{background:#333333 url('/img/bg_texture.svg');}
+#wrap{background:#f1f2f3;position:relative;margin:0 auto;min-width:320px;height:100%;max-width:420px;}
+.colgroup{position:relative;margin:0 auto;width:100%;}
+#header{position:relative;top:0;z-index:30;width:100%;height:90px;background:#fff;}
+#container{position:relative;top:0;z-index:20;margin:-90px 0 0;padding:0;min-height:100%;background:#f1f2f3;}
+#content{position:relative;top:90px;left:0;margin:0;padding:0;height:auto;background:#f1f2f3;}
+/*- header ----------------------------------------------------------------------*/
+body .header{ }
+body .header .ci{position:absolute;top:0;left:0px;}
+body .header .ci *{color:#fff;text-decoration:none;font-size:18px;line-height:50px;float:left;}
+body .header .ci .img-menu.ci-logo{margin:4px 0;width:42px;height:42px;background-image:url('/img/ci_logo.gif');-webkit-background-size:42px 42px;-moz-background-size:42px 42px;-o-background-size:42px 42px;background-size:42px 42px;background-repeat:no-repeat;}
+body .header .ci .img-menu.ci-company-name{margin:15px 0 15px 10px;width:131px;height:20px;background-image:url('/img/ci_company_name.svg');-webkit-background-size:131px 20px;-moz-background-size:131px 20px;-o-background-size:131px 20px;background-size:131px 20px;background-repeat:no-repeat;}
+body .header .gnb{position:absolute;top:16px;right:10px;}
+body .header .gnb *{color:#313841;text-decoration:none;font-weight:bold;font-size:13px;line-height:13px;}
+body .header .gnb > ul > li{float:left;border-left:#313841 1px solid;padding:0 10px;height:13px;line-height:13px;}
+body .header .gnb > ul > li:first-child{border-left-width:0;padding-left:0;}
+body .header .gnb > ul > li.on *{color:#1b79bc;}
+body .header .lnb{position:relative;max-width:100%;top:50px;height:40px;background:#1b79bc;}
+body .header .lnb *{color:#fff;text-decoration:none;font-weight:bold;font-size:16px;line-height:15px;}
+body .header .lnb > ul{display:table;width:100%;max-width:100%;height:15px;padding:13px 0 12px 0;margin-left:-5px;}
+body .header .lnb > ul > li{display:table-cell;white-space:nowrap;text-align:center;border-left:#fff 1px solid;height:15px;line-height:15px;}
+body .header .lnb > ul > li:first-child{border-left:0;padding-left:10px;}
+body .header .lnb > ul > li.on > *{color:#ffee00}
+body .header .lnb > ul > li > a{display:block;}
+#lnb.use-fixed{position:fixed;top:0;min-width:320px;width:100%;max-width:420px;z-index:9999;}
+#lnb.use-fixed.lnb{}
+#search-filter.use-fixed{background:#f1f2f3;position:fixed;top:40px;padding-bottom:10px;min-width:320px;width:100%;max-width:420px;z-index:9999999;}
+/*- contents ----------------------------------------------------------------------*/
+body .container .content > .head{}
+body .container .content > .main{}
+body .container .content > .foot{}
+/*===========================================================================
+	COMMON
+============================================================================*/
+
+
+/*===========================================================================
+	Extend Jquery.ui
+============================================================================*/
+
+
+/*===========================================================================
+	MODAL
+============================================================================*/
+
+
+/*===========================================================================
+	CONTENTS
+============================================================================*/

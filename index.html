@@ -23,14 +23,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link  href="css/happytalk.css?ver=1.1" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" type="text/css" href="css/addon/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/addon/lightslider.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css?version=1.64">
+	<link rel="stylesheet" type="text/css" href="css/index.css?version=2.0">
 	<link rel="stylesheet" type="text/css" href="css/header.css?version=1.6">
 	<link rel="stylesheet" type="text/css" href="css/footer.css?version=1.02">
 	<script type="text/javascript" src="js/addon/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/addon/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/addon/lightslider.js"></script>
 	<script type="text/javascript" src="js/index.js?version=1.65"></script>
-	<script type="text/javascript" src="js/query.js?version=1.1"></script>
+	<script type="text/javascript" src="js/query.js?version=1.31"></script>
 	<link rel="shortcut icon" href="./img/title-logo.png">
 	<title>홈마스터 | 믿을 수 있는 가사, 가사 도우미,  청소, 청소 도우미, 파출부</title>
 	<script type="text/javascript">
@@ -76,11 +76,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WFNQ2R"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div class="btn-chat-happy" style="z-index: 9999;">
-    <div class="btn-chat" id="btn-chat">
-        <a class="happytalk" id="chat-start-btn" data-hasqtip="1" href='https://customer.happytalk.io/public_v1/chat_v4/public_point?go=C&is_login=N&uid=&site_id=4000000331&category_id=68347&division_id=68348&usergb=W&title=%5B%ED%85%8C%EC%8A%A4%ED%8A%B8+%EC%83%81%EB%8B%B4%EC%B0%BD%5D' id="chat-start-btn"  target="_blank"></a>
-    </div>
-</div>
+<!-- Channel Plugin Scripts -->
+<script>
+window.channelPluginSettings = {
+"plugin_id": "3a7f6725-545c-4d07-8b59-27e2ef0b300f"
+};
+(function() {
+var node = document.createElement('div');
+node.id = 'ch-plugin';
+document.body.appendChild(node);
+var async_load = function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//cdn.channel.io/plugin/ch-plugin-web.js';
+  s.charset = 'UTF-8';
+  var x = document.getElementsByTagName('script')[0];
+  x.parentNode.insertBefore(s, x);
+};
+if (window.attachEvent) {
+  window.attachEvent('onload', async_load);
+} else {
+  window.addEventListener('load', async_load, false);
+}
+})();
+</script>
+<!-- End Channel Plugin -->
 <div class="container-fluid">
 	<div id="head_container">
   	<nav class="col-xs-12 navbar navbar-fixed-top">
@@ -128,10 +149,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 			<div class="row">
 				<div class="main-btn-container">
-					<a id="btn_reserv2" href="" class="btn btn_reserv" title="예약">한 번만 클리닝 신청</a>
+					<a id="btn_reserv2" href="https://play.google.com/store/apps/details?id=kr.co.homemaster&hl=ko" class="btn btn_google" title="예약"><img src="./img/main/icon_google.png"></a>
 				</div>
 				<div class="main-btn-container">
-					<a id="btn_reserv" href=""  class="btn btn_reserv" title="예약">정기 클리닝 신청</a>
+					<a id="btn_reserv" href="https://itunes.apple.com/kr/app/%ED%99%88%EB%A7%88%EC%8A%A4%ED%84%B0/id1083523259?mt=8"  class="btn btn_apple" title="예약"><img src="./img/main/icon_apple.png"></a>
 				</div>
 			</div>
 		</div>
@@ -252,15 +273,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</div>
 						<div class="reponstxt margin-b20">
 							<h2 class="font-white">서비스 가능지역</h2>
-							<h1 class="font-white">서울시 전지역, 성남시 분당구</h1>
-							<h4 class="font-white">*그 외의 지역은 서비스 준비 중입니다</h4>
+							<h1 class="font-white">서울특별시 경기도 인천 전지역가능합니다.</h1>
+							<h4 class="font-white">* 마스터님 희망 근무 지역에 따라 서비스가 원할하지 않는 지역이 있을 수 있습니다. 양해바랍니다.</h4>
 						</div>
 						<div class="margin-b20">
 							<div class="reponstxt inline-content">
-								<a id="btn_appleapp" class="btn btn_app" target="_blank" title="애플" href="http://itunes.apple.com/kr/app/hommaseuteo-mid-eul-su-issneun/id1083523259?mt=8">
+								<a id="btn_appleapp" class="btn btn_app btn_apple" target="_blank" title="애플" href="http://itunes.apple.com/kr/app/hommaseuteo-mid-eul-su-issneun/id1083523259?mt=8">
 									<img src="img/main/icon_apple.png">
 								</a>
-								<a id="btn_googleap" class="btn btn_app" target="_blank" title="구글" href="http://play.google.com/store/apps/details?id=kr.co.homemaster">
+								<a id="btn_googleap" class="btn btn_app btn_google" target="_blank" title="구글" href="http://play.google.com/store/apps/details?id=kr.co.homemaster">
 									<img src="img/main/icon_google.png">
 								</a>
 							</div>
